@@ -25,7 +25,15 @@ class TCPServer():
             with open("server_recv.txt", "wb") as f:
                 f.write(request)
 
+            # retrieve the response data to be sent to the client from the file
+            with open("server_send.txt", "rb") as f:
+                response = f.read()
+            
+            # send response data to the client
+            client_socket.send(response)
+
             # end the connection without response 
+            client_socket.close()
 
         finally:
             print("=== shut down the server ===")
