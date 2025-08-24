@@ -1,7 +1,6 @@
-GET / HTTP/1.1
+GET /a.html HTTP/1.1
 Host: localhost:8080
 Connection: keep-alive
-Cache-Control: max-age=0
 sec-ch-ua: "Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"
 sec-ch-ua-mobile: ?0
 sec-ch-ua-platform: "macOS"
